@@ -21,14 +21,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Verify Vercel project link
+      - name: Verify Vercel token
         run: |
           if [ -z "$VERCEL_TOKEN" ]; then
             echo "::error::Add VERCEL_TOKEN as a GitHub Actions repository secret."
-            exit 1
-          fi
-          if [ ! -f .vercel/project.json ]; then
-            echo "::error::Missing .vercel/project.json. Run 'npx vercel link' and commit the generated file."
             exit 1
           fi
 
@@ -36,31 +32,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Pull Vercel project settings for production
-        if: github.event_name == 'push'
-        run: npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
-
-      - name: Pull Vercel project settings for preview
-        if: github.event_name == 'pull_request'
-        run: npx vercel pull --yes --environment=preview --token="$VERCEL_TOKEN"
-
-      - name: Build production deployment
-        if: github.event_name == 'push'
-        run: npx vercel build --prod --token="$VERCEL_TOKEN"
-
-      - name: Build preview deployment
-        if: github.event_name == 'pull_request'
-        run: npx vercel build --token="$VERCEL_TOKEN"
 
       - name: Deploy production
         if: github.event_name == 'push'
-        run: npx vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
+        run: npx vercel@65.14.0 deploy --yes --prod --project=portfolio --scope=dkg8085s-projects
 
       - name: Deploy preview
         if: github.event_name == 'pull_request'
-        run: npx vercel deploy --prebuilt --token="$VERCEL_TOKEN"
+        run: npx vercel@65.14.0 deploy --yes --project=portfolio --scope=dkg8085s-projects
