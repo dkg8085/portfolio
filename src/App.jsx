@@ -147,13 +147,14 @@ function Projects() {
         </SectionHeading>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <article className={`project-card${index === 0 ? ' project-featured' : ''}`} key={project.name}>
+            <article className={`project-card${index === 0 ? ' project-featured' : ''}${project.description ? ' has-description' : ''}`} key={project.name}>
               <div className="project-topline">
                 <span className="project-number">0{index + 1}</span>
                 <span className="project-type">{project.type}</span>
               </div>
               <h3>{project.name}</h3>
               <p className="project-stack">{project.stack}</p>
+              {project.description && <p className="project-description">{project.description}</p>}
               <ul>
                 {project.points.map(point => <li key={point}>{point}</li>)}
               </ul>
