@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dinesh Kumar — Full-Stack Software Developer" />
+    <title>Dinesh Kumar | CV</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 13mm 14mm 15mm;
+      }
+
+      :root {
+        color: #17241e;
+        background: #fff;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 10pt;
+        line-height: 1.42;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        --green: #245c43;
+        --muted: #52635a;
+        --line: #dce5de;
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      a { color: var(--green); text-decoration: none; }
+      .page { min-height: 269mm; }
+      .page-break { break-before: page; page-break-before: always; }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 18px 20px;
+        color: #fff;
+        background: #193e30;
+        border-radius: 7px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 27pt;
+        line-height: 1.05;
+        letter-spacing: -.7px;
+      }
+      .header .role {
+        margin: 6px 0 0;
+        color: #c9ddcd;
+        font-size: 11pt;
+        font-weight: 600;
+      }
+      .contact {
+        display: grid;
+        gap: 4px;
+        padding-top: 3px;
+        color: #e4eee6;
+        font-size: 9pt;
+        text-align: right;
+      }
+      .contact a { color: #fff; }
+      .section { margin-top: 13px; }
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        gap: 9px;
+        margin: 0 0 7px;
+        color: var(--green);
+        font-size: 12pt;
+        line-height: 1.2;
+      }
+      .section-title::after {
+        height: 1px;
+        flex: 1;
+        background: var(--line);
+        content: "";
+      }
+      .summary {
+        margin: 0;
+        color: #394a40;
+        font-size: 10pt;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px 16px;
+      }
+      .skill {
+        margin: 0;
+        color: var(--muted);
+        font-size: 9pt;
+      }
+      .skill strong {
+        color: #20372a;
+        font-size: 9pt;
+      }
+      .experience-list { display: grid; gap: 6px; }
+      .experience {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1px 14px;
+        padding: 0 0 6px;
+        border-bottom: 1px solid #edf1ed;
+      }
+      .experience:last-child { padding-bottom: 0; border-bottom: 0; }
+      .experience strong { font-size: 10pt; }
+      .experience time { color: var(--green); font-size: 9pt; font-weight: 700; }
+      .experience span { grid-column: 1 / -1; color: var(--muted); font-size: 9pt; }
+      .projects { display: grid; gap: 8px; }
+      .project {
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .project-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+      }
+      .project h3 { margin: 0; font-size: 10.5pt; line-height: 1.25; }
+      .stack { color: var(--green); font-size: 8.5pt; font-weight: 600; text-align: right; }
+      .project ul { display: grid; gap: 2px; margin: 4px 0 0; padding-left: 16px; }
+      .project li { padding-left: 1px; color: #394a40; font-size: 9pt; line-height: 1.35; }
+      .project li::marker { color: #73947a; }
+      .project-url { margin-top: 4px; font-size: 8.5pt; }
+      .education-list { display: grid; gap: 8px; }
+      .education {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2px 12px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        break-inside: avoid;
+      }
+      .education strong { font-size: 9.5pt; }
+      .education time, .grade { color: var(--green); font-size: 8.5pt; font-weight: 700; }
+      .education span { color: var(--muted); font-size: 9pt; }
+      .grade { grid-column: 1 / -1; }
+      .interests { margin: 0; color: var(--muted); font-size: 9pt; }
+      .page-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: 8px;
+        border-bottom: 2px solid var(--green);
+      }
+      .page-heading strong { color: #20372a; font-size: 13pt; }
+      .page-heading span { color: var(--muted); font-size: 9pt; }
+      .page-two-content { display: grid; gap: 11px; }
+      .page-two-content .section { margin-top: 0; }
+      @media screen {
+        body { width: 210mm; margin: 20px auto; }
+        .page { min-height: 269mm; padding: 13mm 14mm 15mm; box-shadow: 0 2px 18px #0002; }
+        .page-break { margin-top: 20px; }
+      }
+      @media print {
+        .page { min-height: 0; }
+        a { color: var(--green); }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="page">
+        <header class="header">
+          <div>
+            <h1>Dinesh Kumar</h1>
+            <p class="role">Full-Stack Software Developer</p>
+          </div>
+          <div class="contact">
+            <span>Indore, Madhya Pradesh, India</span>
+            <a href="tel:+917509903735">+91 75099 03735</a>
+            <a href="mailto:dkg8085@gmail.com">dkg8085@gmail.com</a>
+            <a href="https://www.linkedin.com/in/dinesh-kumar-7425a3153?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">linkedin.com/in/dinesh-kumar-7425a3153</a>
+            <a href="https://github.com/dkg8085">github.com/dkg8085</a>
+          </div>
+        </header>
+
+        <section class="section">
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="summary">
+            Full-stack developer with 4+ years of experience building web applications, scalable APIs,
+            authentication systems, and third-party integrations. Skilled in Laravel, React.js, Node.js,
+            Django, and AWS, with a focus on dependable software and practical problem-solving.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills">
+            <p class="skill"><strong>Programming:</strong> PHP, JavaScript, Node.js, Python (Basic)</p>
+            <p class="skill"><strong>Frontend:</strong> HTML, React.js, CSS, jQuery, Bootstrap</p>
+            <p class="skill"><strong>Backend:</strong> Laravel, CodeIgniter, NestJS, Django</p>
+            <p class="skill"><strong>Databases:</strong> MySQL, PostgreSQL, MongoDB</p>
+            <p class="skill"><strong>AWS:</strong> S3, Lambda, Step Functions, DynamoDB, API Gateway, Route 53, CloudFront, EC2, Lightsail, RDS, IAM, Cognito, Secrets Manager, CloudWatch</p>
+            <p class="skill"><strong>APIs & services:</strong> REST APIs, third-party integrations</p>
+            <p class="skill"><strong>DevOps & CI/CD:</strong> Docker, Jenkins, GitHub Actions, Bitbucket Pipelines</p>
+            <p class="skill"><strong>Tools:</strong> Git, Bitbucket, Postman, VS Code, Sublime</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Work Experience</h2>
+          <div class="experience-list">
+            <article class="experience">
+              <strong>Software Developer · Techera Business Software Solutions Pvt Ltd, Indore</strong>
+              <time>Dec 2024 — Present</time>
+            </article>
+            <article class="experience">
+              <strong>Web Developer · Dream Cyber Infoway, Indore</strong>
+              <time>Jul 2023 — Dec 2024</time>
+            </article>
+            <article class="experience">
+              <strong>Web Developer · P&amp;P Infotech Applying Solutions, Indore</strong>
+              <time>Dec 2021 — May 2023</time>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Major Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <div class="project-heading">
+                <h3>Boomsite</h3>
+                <span class="stack">React.js · PHP</span>
+              </div>
+              <ul>
+                <li>Single-source content platform for broadcast radio, podcasters, internet radio, and independent creators.</li>
+                <li>Brings industry-curated prep content, fresh audio, news, and stories together for creators.</li>
+              </ul>
+              <div class="project-url"><a href="https://boomsite.fm/">boomsite.fm</a></div>
+            </article>
+            <article class="project">
+              <div class="project-heading">
+                <h3>AI Boomsite</h3>
+                <span class="stack">React.js · PHP · AWS</span>
+              </div>
+              <ul>
+                <li>AI-powered news workflow that sources U.S. news, classifies content, and uses ChatGPT for rewriting.</li>
+                <li>Serverless processing and storage workflow using AWS S3, DynamoDB, and Lambda.</li>
+              </ul>
+              <div class="project-url"><a href="https://ai.boomsite.fm/">ai.boomsite.fm</a></div>
+            </article>
+            <article class="project">
+              <div class="project-heading">
+                <h3>Liendraw</h3>
+                <span class="stack">Django</span>
+              </div>
+              <ul>
+                <li>Construction lien-management platform for documents, project details, and compliance workflows.</li>
+                <li>Role-based collaboration and streamlined document approvals for contractors, homeowners, and admins.</li>
+              </ul>
+              <div class="project-url"><a href="https://admin.liendraw.com/">admin.liendraw.com</a></div>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page page-break">
+        <div class="page-heading">
+          <strong>Dinesh Kumar</strong>
+          <span>Selected projects · Education</span>
+        </div>
+        <div class="page-two-content">
+          <section class="section">
+            <h2 class="section-title">Major Projects · Continued</h2>
+            <div class="projects">
+              <article class="project">
+                <div class="project-heading">
+                  <h3>Xamplifier</h3>
+                  <span class="stack">Laravel · MongoDB · MySQL</span>
+                </div>
+                <ul>
+                  <li>Contributed to Layline modules including profiles, settings, admin dashboards, and dashboard APIs.</li>
+                  <li>Built REST APIs and cookie-based single sign-on across products; supported debugging and performance improvements.</li>
+                </ul>
+                <div class="project-url"><a href="https://www.xamplifier.com/">xamplifier.com</a></div>
+              </article>
+              <article class="project">
+                <div class="project-heading">
+                  <h3>Phantom Producer</h3>
+                  <span class="stack">Web &amp; mobile platform</span>
+                </div>
+                <ul>
+                  <li>Radio production platform for creating custom promos and sweepers with station voice tracks, music, and branding.</li>
+                  <li>Supports production on mobile and desktop, with automatic syncing between devices.</li>
+                </ul>
+                <div class="project-url"><a href="https://phantomproducer.com/">phantomproducer.com</a></div>
+              </article>
+              <article class="project">
+                <div class="project-heading">
+                  <h3>Your Weekend</h3>
+                  <span class="stack">Local events platform</span>
+                </div>
+                <ul>
+                  <li>Collects local events across communities to help residents plan what to do over the weekend.</li>
+                  <li>Features a concise weekly guide and audio roundup to help people find worthwhile events without endless scrolling.</li>
+                </ul>
+                <div class="project-url"><a href="https://yourweekend.info/ridgefield">yourweekend.info/ridgefield</a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+              <article class="education">
+                <strong>B.Tech, Computer Science &amp; Engineering</strong>
+                <time>2015 — 2018</time>
+                <span>Govt. Jabalpur Engineering College, Jabalpur</span>
+                <span class="grade">GPA 6.5 / 10</span>
+              </article>
+              <article class="education">
+                <strong>Polytechnic Diploma, Computer Science &amp; Engineering</strong>
+                <time>2012 — 2015</time>
+                <span>Govt. Polytechnic College, Morena</span>
+                <span class="grade">GPA 7.04 / 10</span>
+              </article>
+              <article class="education">
+                <strong>10th Grade</strong>
+                <time>2011 — 2012</time>
+                <span>Govt. High School, Nalkheda</span>
+                <span class="grade">65.83%</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Interests</h2>
+            <p class="interests">Playing and watching cricket · Traveling and exploring new places</p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
