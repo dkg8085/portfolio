@@ -94,7 +94,6 @@ export const education = [
     title: 'B.Tech, Computer Science & Engineering',
     institution: 'Govt. Jabalpur Engineering College, Jabalpur',
     period: '2015 — 2018',
-    grade: 'First Class',
   },
   {
     title: 'Polytechnic Diploma, Computer Science & Engineering',
