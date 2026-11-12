@@ -18,9 +18,46 @@ export const skills = [
 ]
 
 export const experience = [
-  { title: 'Software Developer', company: 'Techera Business Software Solutions Pvt Ltd · Indore', period: 'Dec 2024 — Present' },
-  { title: 'Web Developer', company: 'Dream Cyber Infoway · Indore', period: 'Jul 2023 — Dec 2024' },
-  { title: 'Web Developer', company: 'P&P Infotech Applying Solutions · Indore', period: 'Dec 2021 — May 2023' },
+  {
+    title: 'Software Developer',
+    company: 'Techera Business Software Solutions Pvt Ltd',
+    location: 'Indore',
+    period: 'Dec 2024 — Present',
+    current: true,
+    highlights: [
+      'Develop and maintain scalable applications using PHP, Laravel, Node.js, NestJS, React.js, and JavaScript.',
+      'Build REST APIs, backend services, business logic, authentication systems, and third-party integrations.',
+      'Create responsive, reusable frontend components using React.js, HTML, CSS, Bootstrap, and JavaScript.',
+      'Design and optimize database schemas and queries across MySQL, PostgreSQL, and MongoDB.',
+      'Deploy and manage AWS infrastructure, including EC2, S3, Lambda, API Gateway, DynamoDB, RDS, CloudFront, and Route 53.',
+    ],
+  },
+  {
+    title: 'Laravel Developer',
+    company: 'Dream Cyber Infoway',
+    location: 'Indore',
+    period: 'Jul 2023 — Dec 2024',
+    highlights: [
+      'Manage the software lifecycle from requirements and technical planning through development, deployment, and maintenance.',
+      'Develop scalable web applications with PHP, Laravel, and MVC architecture.',
+      'Build REST APIs, backend services, authentication, and third-party integrations.',
+      'Design database structures, migrations, relationships, and optimized queries for MySQL and PostgreSQL.',
+      'Implement role-based access control, permissions, middleware, and secure authentication.',
+    ],
+  },
+  {
+    title: 'Web Developer',
+    company: 'P&P Infotech Applying Solutions',
+    location: 'Indore',
+    period: 'Dec 2021 — May 2023',
+    highlights: [
+      'Develop web applications using PHP, Laravel, CodeIgniter, and MVC architecture.',
+      'Build backend functionality, business logic, and reusable application components.',
+      'Create REST APIs for frontend applications and third-party integrations.',
+      'Work with MySQL queries, relationships, joins, and CRUD operations.',
+      'Develop dynamic interfaces using HTML, CSS, JavaScript, jQuery, and Bootstrap.',
+    ],
+  },
 ]
 
 export const projects = [

@@ -3,167 +3,76 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Dinesh Kumar — Full-Stack Software Developer" />
+    <meta name="description" content="Dinesh Kumar - Full-Stack Software Developer" />
     <title>Dinesh Kumar | CV</title>
     <style>
-      @page {
-        size: A4;
-        margin: 13mm 14mm 15mm;
-      }
-
+      @page { size: A4; margin: 13mm 15mm 14mm; }
       :root {
-        color: #17241e;
+        color: #26332e;
         background: #fff;
-        font-family: "Segoe UI", Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 10pt;
-        line-height: 1.42;
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        --green: #245c43;
-        --muted: #52635a;
-        --line: #dce5de;
+        line-height: 1.4;
+        --accent: #28664d;
+        --muted: #52615a;
+        --rule: #d8e1db;
       }
-
       * { box-sizing: border-box; }
       body { margin: 0; }
-      a { color: var(--green); text-decoration: none; }
+      a { color: #245c43; text-decoration: none; }
       .page { min-height: 269mm; }
       .page-break { break-before: page; page-break-before: always; }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 18px 20px;
-        color: #fff;
-        background: #193e30;
-        border-radius: 7px;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      .header h1 {
-        margin: 0;
-        font-size: 27pt;
-        line-height: 1.05;
-        letter-spacing: -.7px;
-      }
-      .header .role {
-        margin: 6px 0 0;
-        color: #c9ddcd;
-        font-size: 11pt;
-        font-weight: 600;
-      }
-      .contact {
-        display: grid;
-        gap: 4px;
-        padding-top: 3px;
-        color: #e4eee6;
-        font-size: 9pt;
-        text-align: right;
-      }
-      .contact a { color: #fff; }
-      .section { margin-top: 13px; }
+      .header { padding: 2mm 0 4mm; border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rule); }
+      .header h1 { margin: 0; color: #1d382b; font-size: 25pt; line-height: 1.08; letter-spacing: -.3px; }
+      .header .role { margin: 4px 0 8px; color: var(--accent); font-size: 11pt; font-weight: 700; }
+      .contact { color: var(--muted); font-size: 8.5pt; line-height: 1.55; }
+      .contact p { margin: 2px 0; }
+      .contact strong { color: #34443b; }
+      .section { margin-top: 12px; }
       .section-title {
-        display: flex;
-        align-items: baseline;
-        gap: 9px;
-        margin: 0 0 7px;
-        color: var(--green);
-        font-size: 12pt;
-        line-height: 1.2;
-      }
-      .section-title::after {
-        height: 1px;
-        flex: 1;
-        background: var(--line);
-        content: "";
-      }
-      .summary {
-        margin: 0;
-        color: #394a40;
+        margin: 0 0 6px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid var(--rule);
+        color: var(--accent);
         font-size: 10pt;
+        line-height: 1.25;
+        letter-spacing: .55px;
       }
-      .skills {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 5px 16px;
-      }
-      .skill {
-        margin: 0;
-        color: var(--muted);
-        font-size: 9pt;
-      }
-      .skill strong {
-        color: #20372a;
-        font-size: 9pt;
-      }
-      .experience-list { display: grid; gap: 6px; }
-      .experience {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 1px 14px;
-        padding: 0 0 6px;
-        border-bottom: 1px solid #edf1ed;
-      }
-      .experience:last-child { padding-bottom: 0; border-bottom: 0; }
-      .experience strong { font-size: 10pt; }
-      .experience time { color: var(--green); font-size: 9pt; font-weight: 700; }
-      .experience span { grid-column: 1 / -1; color: var(--muted); font-size: 9pt; }
-      .projects { display: grid; gap: 8px; }
-      .project {
-        padding: 8px 10px;
-        border: 1px solid var(--line);
-        border-radius: 5px;
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-      .project-heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 12px;
-      }
-      .project h3 { margin: 0; font-size: 10.5pt; line-height: 1.25; }
-      .stack { color: var(--green); font-size: 8.5pt; font-weight: 600; text-align: right; }
-      .project ul { display: grid; gap: 2px; margin: 4px 0 0; padding-left: 16px; }
-      .project li { padding-left: 1px; color: #394a40; font-size: 9pt; line-height: 1.35; }
-      .project li::marker { color: #73947a; }
-      .project-url { margin-top: 4px; font-size: 8.5pt; }
-      .education-list { display: grid; gap: 8px; }
-      .education {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 2px 12px;
-        padding: 8px 10px;
-        border: 1px solid var(--line);
-        border-radius: 5px;
-        break-inside: avoid;
-      }
-      .education strong { font-size: 9.5pt; }
-      .education time, .grade { color: var(--green); font-size: 8.5pt; font-weight: 700; }
-      .education span { color: var(--muted); font-size: 9pt; }
-      .grade { grid-column: 1 / -1; }
-      .interests { margin: 0; color: var(--muted); font-size: 9pt; }
-      .page-heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding-bottom: 8px;
-        border-bottom: 2px solid var(--green);
-      }
-      .page-heading strong { color: #20372a; font-size: 13pt; }
-      .page-heading span { color: var(--muted); font-size: 9pt; }
-      .page-two-content { display: grid; gap: 11px; }
-      .page-two-content .section { margin-top: 0; }
+      .section-title::after { content: none; }
+      .summary { margin: 0; color: #34443b; font-size: 9.5pt; line-height: 1.48; }
+      .skills, .experience-list, .projects, .education-list, .page-two-content { display: block; }
+      .skill { margin: 0 0 3px; color: #34443b; font-size: 9pt; line-height: 1.4; }
+      .skill strong { color: #213e2f; }
+      .experience { margin: 0 0 7px; padding: 0 0 6px 9px; border-bottom: 1px solid #e6ebe7; border-left: 2px solid #a9c5b2; break-inside: avoid; page-break-inside: avoid; }
+      .experience:last-child { border-bottom: 0; }
+      .experience h3, .project h3 { margin: 0; color: #213e2f; font-size: 10pt; line-height: 1.35; }
+      .experience p { margin: 1px 0 0; color: var(--muted); font-size: 9pt; }
+      .experience ul { margin: 3px 0 0; padding-left: 15px; }
+      .experience li { color: #34443b; font-size: 8.8pt; line-height: 1.35; }
+      .project { margin: 0 0 9px; padding-left: 9px; border-left: 2px solid #a9c5b2; break-inside: avoid; page-break-inside: avoid; }
+      .project-heading { display: block; }
+      .stack { display: block; margin-top: 1px; color: var(--muted); font-size: 8.5pt; font-weight: 400; text-align: left; }
+      .project ul { display: block; margin: 3px 0 0; padding-left: 16px; }
+      .project li { padding-left: 0; color: #34443b; font-size: 9pt; line-height: 1.4; }
+      .project-url { margin-top: 2px; font-size: 8.5pt; }
+      .education { margin: 0 0 8px; padding-left: 9px; border-left: 2px solid #a9c5b2; break-inside: avoid; }
+      .education strong, .education time, .education span { display: block; font-size: 9pt; }
+      .education strong { color: #213e2f; }
+      .education time, .education span, .grade { color: var(--muted); font-weight: 400; }
+      .interests { margin: 0; color: #34443b; font-size: 9pt; }
+      .page-heading { padding: 0 0 6px; border-bottom: 1px solid var(--rule); color: #1d382b; }
+      .page-heading strong { font-size: 11pt; }
+      .page-heading span { margin-left: 6px; color: var(--muted); font-size: 9pt; }
+      .page-two-content .section { margin-top: 13px; }
       @media screen {
-        body { width: 210mm; margin: 20px auto; }
-        .page { min-height: 269mm; padding: 13mm 14mm 15mm; box-shadow: 0 2px 18px #0002; }
-        .page-break { margin-top: 20px; }
+        body { width: min(210mm, calc(100% - 32px)); margin: 24px auto; background: #edf1ee; }
+        .page { min-height: 269mm; padding: 13mm 15mm 14mm; background: #fff; box-shadow: 0 4px 22px #1e382b18; }
+        .page-break { margin-top: 22px; }
       }
       @media print {
-        .page { min-height: 0; }
-        a { color: var(--green); }
+        .page { min-height: 0; padding: 0; }
+        .page-break { margin-top: 0; }
+        a { color: #245c43; }
       }
     </style>
   </head>
@@ -176,26 +85,21 @@
             <p class="role">Full-Stack Software Developer</p>
           </div>
           <div class="contact">
-            <span>Indore, Madhya Pradesh, India</span>
-            <a href="tel:+917509903735">+91 75099 03735</a>
-            <a href="mailto:dkg8085@gmail.com">dkg8085@gmail.com</a>
-            <a href="https://portfolio-sigma-olive-69.vercel.app/">portfolio-sigma-olive-69.vercel.app</a>
-            <a href="https://www.linkedin.com/in/dinesh-kumar-7425a3153?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">linkedin.com/in/dinesh-kumar-7425a3153</a>
-            <a href="https://github.com/dkg8085">github.com/dkg8085</a>
+            <p><strong>Location:</strong> Indore, Madhya Pradesh, India &nbsp; | &nbsp; <strong>Phone:</strong> <a href="tel:+917509903735">+91 75099 03735</a> &nbsp; | &nbsp; <strong>Email:</strong> <a href="mailto:dkg8085@gmail.com">dkg8085@gmail.com</a></p>
+            <p><strong>Portfolio:</strong> <a href="https://portfolio-sigma-olive-69.vercel.app/">https://portfolio-sigma-olive-69.vercel.app/</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dinesh-kumar-7425a3153">https://www.linkedin.com/in/dinesh-kumar-7425a3153</a> &nbsp; | &nbsp; <strong>GitHub:</strong> <a href="https://github.com/dkg8085">https://github.com/dkg8085</a></p>
           </div>
         </header>
 
         <section class="section">
           <h2 class="section-title">Professional Summary</h2>
           <p class="summary">
-            Full-stack developer with 4+ years of experience building web applications, scalable APIs,
-            authentication systems, and third-party integrations. Skilled in Laravel, React.js, Node.js,
-            Django, and AWS, with a focus on dependable software and practical problem-solving.
+            Full-Stack Software Developer with nearly 5 years of experience in developing, maintaining web applications and scalable backend systems. Strong expertise in Node.js, PHP, Laravel, CodeIgniter,React.js,REST API development, database management, and AWS cloud services. Experienced in building authentication systems, integrating third-party services, developing serverless applications, and delivering end-to-end software solutions. Familiar with Docker, CI/CD pipelines, and modern development practices.
           </p>
         </section>
 
         <section class="section">
-          <h2 class="section-title">Technical Skills</h2>
+          <h2 class="section-title">Skills</h2>
           <div class="skills">
             <p class="skill"><strong>Programming:</strong> PHP, JavaScript, Node.js, Python (Basic)</p>
             <p class="skill"><strong>Frontend:</strong> HTML, React.js, CSS, jQuery, Bootstrap</p>
@@ -212,55 +116,40 @@
           <h2 class="section-title">Work Experience</h2>
           <div class="experience-list">
             <article class="experience">
-              <strong>Software Developer · Techera Business Software Solutions Pvt Ltd, Indore</strong>
-              <time>Dec 2024 — Present</time>
+              <h3>Software Developer</h3>
+              <p>Techera Business Software Solutions Pvt Ltd | Indore</p>
+              <p><time>Dec 2024 - Present</time></p>
+              <ul>
+                <li>Develop and maintain scalable applications using PHP, Laravel, Node.js, NestJS, React.js, and JavaScript.</li>
+                <li>Build REST APIs, backend services, business logic, authentication systems, and third-party integrations.</li>
+                <li>Create responsive, reusable frontend components using React.js, HTML, CSS, Bootstrap, and JavaScript.</li>
+                <li>Design and optimize database schemas and queries across MySQL, PostgreSQL, and MongoDB.</li>
+                <li>Deploy and manage AWS infrastructure, including EC2, S3, Lambda, API Gateway, DynamoDB, RDS, CloudFront, and Route 53.</li>
+              </ul>
             </article>
             <article class="experience">
-              <strong>Web Developer · Dream Cyber Infoway, Indore</strong>
-              <time>Jul 2023 — Dec 2024</time>
+              <h3>Laravel Developer</h3>
+              <p>Dream Cyber Infoway | Indore</p>
+              <p><time>Jul 2023 - Dec 2024</time></p>
+              <ul>
+                <li>Manage the software lifecycle from requirements and technical planning through development, deployment, and maintenance.</li>
+                <li>Develop scalable web applications with PHP, Laravel, and MVC architecture.</li>
+                <li>Build REST APIs, backend services, authentication, and third-party integrations.</li>
+                <li>Design database structures, migrations, relationships, and optimized queries for MySQL and PostgreSQL.</li>
+                <li>Implement role-based access control, permissions, middleware, and secure authentication.</li>
+              </ul>
             </article>
             <article class="experience">
-              <strong>Web Developer · P&amp;P Infotech Applying Solutions, Indore</strong>
-              <time>Dec 2021 — May 2023</time>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">Major Projects</h2>
-          <div class="projects">
-            <article class="project">
-              <div class="project-heading">
-                <h3>Boomsite</h3>
-                <span class="stack">React.js · PHP</span>
-              </div>
+              <h3>Web Developer</h3>
+              <p>P&amp;P Infotech Applying Solutions | Indore</p>
+              <p><time>Dec 2021 - May 2023</time></p>
               <ul>
-                <li>Single-source content platform for broadcast radio, podcasters, internet radio, and independent creators.</li>
-                <li>Brings industry-curated prep content, fresh audio, news, and stories together for creators.</li>
+                <li>Develop web applications using PHP, Laravel, CodeIgniter, and MVC architecture.</li>
+                <li>Build backend functionality, business logic, and reusable application components.</li>
+                <li>Create REST APIs for frontend applications and third-party integrations.</li>
+                <li>Work with MySQL queries, relationships, joins, and CRUD operations.</li>
+                <li>Develop dynamic interfaces using HTML, CSS, JavaScript, jQuery, and Bootstrap.</li>
               </ul>
-              <div class="project-url"><a href="https://boomsite.fm/">boomsite.fm</a></div>
-            </article>
-            <article class="project">
-              <div class="project-heading">
-                <h3>AI Boomsite</h3>
-                <span class="stack">React.js · PHP · AWS</span>
-              </div>
-              <ul>
-                <li>AI-powered news workflow that sources U.S. news, classifies content, and uses ChatGPT for rewriting.</li>
-                <li>Serverless processing and storage workflow using AWS S3, DynamoDB, and Lambda.</li>
-              </ul>
-              <div class="project-url"><a href="https://ai.boomsite.fm/">ai.boomsite.fm</a></div>
-            </article>
-            <article class="project">
-              <div class="project-heading">
-                <h3>Liendraw</h3>
-                <span class="stack">Django</span>
-              </div>
-              <ul>
-                <li>Construction lien-management platform for documents, project details, and compliance workflows.</li>
-                <li>Role-based collaboration and streamlined document approvals for contractors, homeowners, and admins.</li>
-              </ul>
-              <div class="project-url"><a href="https://admin.liendraw.com/">admin.liendraw.com</a></div>
             </article>
           </div>
         </section>
@@ -269,20 +158,55 @@
       <section class="page page-break">
         <div class="page-heading">
           <strong>Dinesh Kumar</strong>
-          <span>Selected projects · Education</span>
+          <span>Full-Stack Software Developer</span>
         </div>
         <div class="page-two-content">
           <section class="section">
-            <h2 class="section-title">Major Projects · Continued</h2>
+            <h2 class="section-title">Major Projects</h2>
             <div class="projects">
               <article class="project">
                 <div class="project-heading">
-                  <h3>Xamplifier</h3>
-                  <span class="stack">Laravel · MongoDB · MySQL</span>
+                  <h3>Boomsite</h3>
+                  <span class="stack">React.js | PHP</span>
                 </div>
                 <ul>
-                  <li>Contributed to Layline modules including profiles, settings, admin dashboards, and dashboard APIs.</li>
-                  <li>Built REST APIs and cookie-based single sign-on across products; supported debugging and performance improvements.</li>
+                  <li>Single-source content platform for broadcast radio, podcasters, internet radio, and independent creators.</li>
+                  <li>Brings industry-curated prep content, fresh audio, news, and stories together for creators.</li>
+                </ul>
+                <div class="project-url"><a href="https://boomsite.fm/">boomsite.fm</a></div>
+              </article>
+              <article class="project">
+                <div class="project-heading">
+                  <h3>AI Boomsite</h3>
+                  <span class="stack">React.js | PHP | AWS</span>
+                </div>
+                <ul>
+                  <li>AI-powered news workflow that sources U.S. news, classifies content, and uses ChatGPT for rewriting.</li>
+                  <li>Serverless processing and storage workflow using AWS S3, DynamoDB, and Lambda.</li>
+                </ul>
+                <div class="project-url"><a href="https://ai.boomsite.fm/">ai.boomsite.fm</a></div>
+              </article>
+              <article class="project">
+                <div class="project-heading">
+                  <h3>Liendraw</h3>
+                  <span class="stack">Django</span>
+                </div>
+                <ul>
+                  <li>Construction lien-management platform for documents, project details, and compliance workflows.</li>
+                  <li>Role-based collaboration and streamlined document approvals for contractors, homeowners, and admins.</li>
+                </ul>
+                <div class="project-url"><a href="https://admin.liendraw.com/">admin.liendraw.com</a></div>
+              </article>
+              <article class="project">
+                <div class="project-heading">
+                  <h3>Xamplifier</h3>
+                  <span class="stack">Laravel | MongoDB | MySQL</span>
+                </div>
+                <ul>
+                  <li>Developed and maintained Laravel-based modules, including user profiles, settings, and administrative dashboards.</li>
+                  <li>Designed and implemented RESTful APIs for frontend application integration.</li>
+                  <li>Implemented cookie-based Single Sign-On (SSO) across multiple products.</li>
+                  <li>Worked with MongoDB and MySQL for database management and application functionality.</li>
                 </ul>
                 <div class="project-url"><a href="https://www.xamplifier.com/">xamplifier.com</a></div>
               </article>
@@ -316,19 +240,19 @@
             <div class="education-list">
               <article class="education">
                 <strong>B.Tech, Computer Science &amp; Engineering</strong>
-                <time>2015 — 2018</time>
+                <time>2015 - 2018</time>
                 <span>Govt. Jabalpur Engineering College, Jabalpur</span>
                 <span class="grade">GPA 6.5 / 10</span>
               </article>
               <article class="education">
                 <strong>Polytechnic Diploma, Computer Science &amp; Engineering</strong>
-                <time>2012 — 2015</time>
+                <time>2012 - 2015</time>
                 <span>Govt. Polytechnic College, Morena</span>
                 <span class="grade">GPA 7.04 / 10</span>
               </article>
               <article class="education">
                 <strong>10th Grade</strong>
-                <time>2011 — 2012</time>
+                <time>2011 - 2012</time>
                 <span>Govt. High School, Nalkheda</span>
                 <span class="grade">65.83%</span>
               </article>
@@ -337,7 +261,7 @@
 
           <section class="section">
             <h2 class="section-title">Interests</h2>
-            <p class="interests">Playing and watching cricket · Traveling and exploring new places</p>
+            <p class="interests">Playing and watching cricket | Traveling and exploring new places</p>
           </section>
         </div>
       </section>

@@ -55,9 +55,6 @@ function Hero() {
           <p className="hero-lead">{profile.summary}</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">Explore my work <ArrowIcon /></a>
-            <a className="button button-secondary" href="/Dinesh-Kumar-CV.pdf" download>
-              Download CV <span className="download-icon" aria-hidden="true">↓</span>
-            </a>
           </div>
           <div className="hero-facts" aria-label="Career highlights">
             <div><strong>4+</strong><span>Years building software</span></div>
@@ -74,9 +71,6 @@ function Hero() {
           <div className="card-divider" />
           <div className="profile-detail"><span>Based in</span><strong>Indore, Madhya Pradesh</strong></div>
           <div className="profile-detail"><span>Focus</span><strong>Web apps · APIs · AWS</strong></div>
-          <a className="button button-primary profile-cv" href="/Dinesh-Kumar-CV.pdf" download>
-            Download CV (PDF) <span className="download-icon" aria-hidden="true">↓</span>
-          </a>
           <a className="card-email" href={`mailto:${profile.email}`}>{profile.email} <ArrowIcon /></a>
           <a className="card-email profile-linkedin" href={profile.linkedIn} target="_blank" rel="noreferrer">
             LinkedIn profile <ArrowIcon />
@@ -117,21 +111,25 @@ function Experience() {
   return (
     <section className="section section-muted" id="experience">
       <div className="container">
-        <SectionHeading eyebrow="THE JOURNEY" description="Professional experience across software development teams in Indore.">
+        <SectionHeading eyebrow="THE JOURNEY" description="Career progression across three development roles in Indore since 2021.">
           Work experience
         </SectionHeading>
-        <div className="timeline">
+        <div className="experience-list">
           {experience.map((job, index) => (
-            <article className="timeline-item" key={job.company}>
-              <span className="timeline-marker" aria-hidden="true" />
-              <p className="timeline-date">{job.period}</p>
-              <div className="timeline-content">
-                <div>
-                  <h3>{job.title}</h3>
-                  <p>{job.company}</p>
+            <article className={`experience-card${job.current ? ' is-current' : ''}`} key={job.company}>
+              <span className="experience-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+              <div className="experience-details">
+                <div className="experience-meta">
+                  <p className="experience-period">{job.period}</p>
+                  {job.current && <span className="current-badge">Current</span>}
                 </div>
-                {index === 0 && <span className="current-badge">Current</span>}
+                <h3>{job.title}</h3>
+                <p className="experience-company">{job.company}</p>
+                <ul className="experience-highlights">
+                  {job.highlights.map(highlight => <li key={highlight}>{highlight}</li>)}
+                </ul>
               </div>
+              <span className="experience-location">{job.location}</span>
             </article>
           ))}
         </div>
@@ -217,9 +215,6 @@ function Contact() {
           </a>
           <a className="contact-link" href={profile.github} target="_blank" rel="noreferrer">
             <span>GitHub</span><strong>View my projects</strong><ArrowIcon />
-          </a>
-          <a className="button button-primary contact-cv" href="/Dinesh-Kumar-CV.pdf" download>
-            Download my CV <span className="download-icon" aria-hidden="true">↓</span>
           </a>
         </div>
       </div>
