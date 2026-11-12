@@ -128,9 +128,9 @@ h1 span, .contact-inner h2 span { color: var(--green); }
 .education-card h3 { margin-bottom: 6px; font-size: 14px; letter-spacing: -.02em; line-height: 1.45; }
 .education-card p { margin-bottom: 14px; color: var(--muted); font-size: 11px; }
 .education-grade { margin-top: auto; color: #5e7564; font-size: 10px; font-weight: 700; }
-.interests { display: flex; flex-wrap: wrap; gap: 10px 25px; margin-top: 25px; padding-top: 18px; border-top: 1px solid #dfe7df; }
+.interests { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 25px; margin-top: 25px; padding-top: 18px; border-top: 1px solid #dfe7df; }
 .interests span { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.interests p { margin: 0; color: var(--muted); font-size: 12px; }
+.interests ul { display: grid; flex: 1; gap: 6px; margin: 0; padding-left: 18px; color: var(--muted); font-size: 12px; }
 
 .contact-section { padding: 79px 0; color: #fff; background: var(--green-dark); }
 .contact-inner { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 65px; }
@@ -238,7 +238,7 @@ h1 { font-size: clamp(48px, 6.6vw, 78px); }
 .education-card h3 { font-size: 16px; }
 .education-card p { font-size: 13px; }
 .interests span { font-size: 12px; }
-.interests p { font-size: 14px; }
+.interests ul { font-size: 16px; }
 .contact-inner h2 { font-size: clamp(36px, 4.8vw, 52px); }
 .contact-copy { font-size: 15px; }
 .contact-link span { font-size: 12px; }

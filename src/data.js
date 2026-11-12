@@ -166,4 +166,8 @@ export const education = [
   },
 ]
 
-export const interests = ['Playing and watching cricket', 'Traveling and exploring new places']
+export const interests = [
+  'Played for the Techera Titans in the 2025 ISA Cricket Tournament',
+  'Playing and watching cricket',
+  'Traveling and exploring new places',
+]

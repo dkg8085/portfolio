@@ -30,7 +30,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="brand" href="#home" aria-label="Dinesh Kumar, home">
+        <a className="brand" href="#about" aria-label="Dinesh Kumar, home">
           <span className="brand-mark">DK</span>
           <span>Dinesh Kumar</span>
         </a>
@@ -47,7 +47,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="about">
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow"><span className="status-dot" /> Software developer · Indore, India</p>
@@ -188,7 +188,9 @@ function Education() {
         </div>
         <div className="interests">
           <span>Outside of work</span>
-          <p>{interests.join(' · ')}</p>
+          <ul>
+            {interests.map(interest => <li key={interest}>{interest}</li>)}
+          </ul>
         </div>
       </div>
     </section>
@@ -240,7 +242,7 @@ export default function App() {
         <div className="container footer-inner">
           <span>© {new Date().getFullYear()} Dinesh Kumar</span>
           <span>Designed & built with care</span>
-          <a href="#home">Back to top ↑</a>
+          <a href="#about">Back to top ↑</a>
         </div>
       </footer>
     </>
