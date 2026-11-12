@@ -16,12 +16,21 @@ jobs:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     env:
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Verify Vercel project link
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::error::Add VERCEL_TOKEN as a GitHub Actions repository secret."
+            exit 1
+          fi
+          if [ ! -f .vercel/project.json ]; then
+            echo "::error::Missing .vercel/project.json. Run 'npx vercel link' and commit the generated file."
+            exit 1
+          fi
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
