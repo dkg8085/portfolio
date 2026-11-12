@@ -183,7 +183,7 @@ function Education() {
               <span className="education-period">{item.period}</span>
               <h3>{item.title}</h3>
               <p>{item.institution}</p>
-              <span className="education-grade">{item.grade}</span>
+              {item.grade && <span className="education-grade">{item.grade}</span>}
             </article>
           ))}
         </div>
