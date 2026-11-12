@@ -131,16 +131,19 @@ export const education = [
     title: 'B.Tech, Computer Science & Engineering',
     institution: 'Govt. Jabalpur Engineering College, Jabalpur',
     period: '2015 — 2018',
+    grade: 'GPA 6.5 / 10',
   },
   {
     title: 'Polytechnic Diploma, Computer Science & Engineering',
     institution: 'Govt. Polytechnic College, Morena',
     period: '2012 — 2015',
+    grade: 'GPA 7.04 / 10',
   },
   {
     title: '10th Grade',
     institution: 'Govt. High School, Nalkheda',
     period: '2011 — 2012',
+    grade: '65.83%',
   },
 ]
 
