@@ -1,6 +1,6 @@
 export const profile = {
   summary:
-    'Full-stack developer with 4+ years of experience building web applications, scalable APIs, authentication systems, and third-party integrations. I enjoy solving problems with clean, dependable software.',
+    'Full-Stack Software Developer with nearly 5 years of experience in designing, developing, and maintaining web applications and scalable backend systems. Strong expertise in PHP, Laravel, CodeIgniter, React.js, Node.js, REST API development, database management, and AWS cloud services. Experienced in building authentication systems, integrating third-party services, developing serverless applications, and delivering end-to-end software solutions. Familiar with Docker, CI/CD pipelines, and modern development practices.',
   email: 'dkg8085@gmail.com',
   phone: '+91 75099 03735',
   linkedIn: 'https://www.linkedin.com/in/dinesh-kumar-7425a3153?utm_source=share_via&utm_content=profile&utm_medium=member_android',
